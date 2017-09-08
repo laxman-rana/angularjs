@@ -11,6 +11,8 @@ import { Directive,
 })
 export class BetterHighlightDirective implements OnInit {
 
+  odd : boolean = false;
+
   @Input() defaultBackgroundColor : string = "transparent";
   @Input() highlightColor: string = "blue";
 
@@ -32,4 +34,6 @@ export class BetterHighlightDirective implements OnInit {
     //this.renderer.setStyle(this.elementRef.nativeElement,"background-color","transparent");
     this.backgroundColor = this.defaultBackgroundColor;
   }
+
+  
 }

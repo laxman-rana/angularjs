@@ -1,3 +1,9 @@
 <p appBasicHighlight> Highlight this! </p>
 <hr>
-<p appBetterHighlight [defaultBackgroundColor]="'yellow'" [highlightColor]="'red'"> Highlight this! </p>
+<button class="btn btn-primary" (click)="odd = !odd">Click</button>
+
+<p appBetterHighlight [defaultBackgroundColor]="'yellow'" highlightColor="red"> Highlight this! </p>
+{{odd}}
+<div *appUnless="odd">
+  <p>Condition is false. Please display me.</p>
+</div>
