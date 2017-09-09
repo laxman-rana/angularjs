@@ -1,5 +1,5 @@
 import { LoggingService } from "./logging.service";
-import { Injectable } from '@angular/core';
+import { Injectable, EventEmitter } from '@angular/core';
 
 // Injectable decorator is used on service class which accpets other services to be injected.
 @Injectable()
@@ -19,6 +19,8 @@ export class AccountsService {
         }
       ];
     
+      statusUpdate = new EventEmitter<string>();
+      
       constructor(private loggingService: LoggingService){}
 
       onAccountAdded(name: string, status: string) {
